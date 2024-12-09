@@ -28,11 +28,13 @@ export function SocketProvider({ children }) {
 
     const loadNotificationCount = async (user_id) => {
         try {
-            const response = await axios.get(`${API_URL}/user/notification/unread/${user_id}`)
+            const response = await axios.get(`${API_URL}/user/notification/unread/${user_id}`, {
+                headers: { instabook_token: localStorage.getItem("instabook_token") }
+            });
             // console.table(response.data.data);
             setNotificationCount(response.data.data.unreadCount)
 
-        } catch (error) {
+        } catch (error) {   
             console.log("Error while getting notification count.")
             console.table(error.response.data)
         }

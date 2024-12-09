@@ -34,7 +34,7 @@ function Sidebar() {
                 </div> */}
 
                 <div className="m-4 flex justify-center items-center gap-2 cursor-pointer">
-                    <img src="black_logo.png" alt="logo" className='size-10' />
+                    {/* <img src="black_logo.png" alt="logo" className='size-10' /> */}
                     <h1
                         className={`text-4xl font-serif insta_font text-center ${isHovered ? 'gradient-text' : ''}`}
                         onMouseEnter={() => setIsHovered(true)}  // Set state to true when hovered

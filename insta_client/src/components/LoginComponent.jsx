@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useInstaContext } from "@/hooks/useInstaContext";
 import axios from 'axios';
+import GoogleLoginButton from "@/Oauth/GoogleLoginButton";
 const apiUrl = import.meta.env.VITE_API_URL
 
 function LoginComponent() {
@@ -61,7 +62,7 @@ function LoginComponent() {
       console.log("Login response :: ");
       console.table(response.data);
 
-      if (response.data.two_factor_enabled) {
+      if (response.data.data.two_factor_enabled) {
         console.log("Two fector enabled :: ");
         return setStep(2);
       }
@@ -208,10 +209,7 @@ function LoginComponent() {
             <div className="h-px bg-zinc-700 flex-1" />
           </div>
 
-          <button className="flex items-center gap-2 text-blue-500 font-semibold">
-            <Facebook size={20} />
-            Log in with Facebook
-          </button>
+          <GoogleLoginButton />
 
           <Link to={"/reset"} className="text-sm text-blue-500 mt-4">
             Forgot password?

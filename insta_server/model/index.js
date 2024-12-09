@@ -75,9 +75,9 @@ Session.belongsTo(Users, { foreignKey: "user_id", as: "user" });
 //   .then(() => console.log("Models sync success"))
 //   .catch((err) => console.log("Error sync Models " + err));
 
-// Session.sync({ alter: true })
-//   .then(() => console.log("Models sync success"))
-//   .catch((err) => console.log("Error sync Models " + err));
+// Users.sync({ alter: true })
+//   .then(() => console.log("Users sync success"))
+//   .catch((err) => console.log("Error sync Users " + err));
 
 module.exports = {
   Users,

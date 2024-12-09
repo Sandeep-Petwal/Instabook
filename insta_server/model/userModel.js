@@ -9,6 +9,10 @@ const Users = sequelize.define("users", {
         autoIncrement: true,
         primaryKey: true
     },
+    googleId: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false
