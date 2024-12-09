@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%
+  }
+}
+
+
+
+body {
+  color: white;
+}
+
+
+.insta_font {
+  font-family: "Lobster", sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #f093fb, #f5576c, #ffca28);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  transition: background-position 0.5s ease;
+  background-size: 200% 200%;
+}
+
+.hover-text:hover {
+  background: linear-gradient(45deg, #f093fb, #f5576c, #ffca28);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  transition: background-position 0.5s ease;
+  background-size: 200% 200%;
+
+}
+
+.selectet_user_bg {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4);
+}
+
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #110a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #241e1e;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #494848;
+}
+
+.containerr::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* for print  */
+@media print {
+  body {
+    background: white !important;
+  }
+
+  .bg-gray-900 {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .bg-gray-800 {
+    background-color: white !important;
+    border: 1px solid #e5e7eb !important;
+    color: black !important;
+  }
+
+  .text-gray-100 {
+    color: black !important;
+  }
+
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+
+  .border-gray-700 {
+    border-color: #e5e7eb !important;
+  }
+}
